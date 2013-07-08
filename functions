@@ -1,0 +1,44 @@
+<?php
+
+$keyword = $_POST["Uinput1"];
+$keyword2 = $_POST["Uinput2"];
+
+function is_alpha($keyword) {
+    if ($keyword == NULL) {
+        //echo "No input has been recieved.";
+    } else {
+        if (ctype_alpha($keyword)) {
+            echo "The string $keyword consists of all letters.\n";
+        } else {
+            echo "The string $keyword does not consist of all letters.\n";
+        }
+    }
+}
+
+$testcase = is_alpha($keyword);
+
+//echo $testcase;
+
+function is_number($keyword2) {
+    if ($keyword2 == NULL) {
+        echo "No input has been recieved.";
+    } else {
+        $pieces = explode(",", $keyword2);
+
+        if (strlen($pieces[0]) > 3) {
+            echo "This is NOT a valid number";
+        } else {
+            for ($i = 1; $i <= (count($pieces) - 1); $i++) {
+                if (strlen($pieces[$i]) != 3) {
+                    echo "This is NOT a valid number";
+                } else {
+                    echo "This is a valid number...YAY!";
+                }
+            }
+        }
+    }
+}
+
+$testcase2 = is_number($keyword2);
+echo $testcase2;
+?>
