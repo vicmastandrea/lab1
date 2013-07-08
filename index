@@ -1,0 +1,12 @@
+<HTML>
+    <form action="functions.php" method="post">
+        Alpha String Input: <input type="text" name="Uinput1"><br>
+        
+        <br>
+        Number Input: <input type="text" name="Uinput2"><br>
+        
+        <input type="submit">
+        
+    </form>
+</HTML>
+
